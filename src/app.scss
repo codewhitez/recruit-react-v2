@@ -1,0 +1,21 @@
+:global {
+    .demo {
+        font-family: "Roboto";
+        color: orange;
+    }
+
+    .main {
+        flex-grow: 1;
+
+        h1 {
+
+            margin-bottom: 80px;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+        }
+    }
+
+}

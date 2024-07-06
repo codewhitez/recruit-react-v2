@@ -1,6 +1,34 @@
-import React, { FC } from "react";
-import * as styles from "./app.module.scss";
+import React, { FC, useState } from "react";
+import "./app.scss";
+import Header from "./components/Header";
+import CardEntry from "./components/CardEntry";
+import Login from "./components/Login";
 
 export const App = () => {
-  return <h1 className={styles.demo}>Welcome to your technical test!</h1>;
+    const [userName, setUserName] = useState<string>("");
+
+    return (
+        <>
+            <Header title={"Register card form"} openMenu={false} />
+            <main className="main">
+                <section>
+                    {userName ? (
+                        <>
+                            <h2 role="heading" aria-level={2}>
+                                Welcome {userName}
+                            </h2>
+                            <CardEntry />
+                        </>
+                    ) : (
+                        <>
+                            <h2 role="heading" aria-level={2}>
+                                Please Enter Your Name
+                            </h2>
+                            <Login enterName={setUserName} />
+                        </>
+                    )}
+                </section>
+            </main>
+        </>
+    );
 };
