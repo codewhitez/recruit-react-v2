@@ -13,7 +13,7 @@ const Header = (props: any) => {
         <>
             <header role="banner" className={styles.header}>
                 <div className={styles["hamburger-container"]}>
-                    <button onClick={onClick} className="" role="menubar">
+                    <button onClick={onClick} className="" aria-label="menu">
                         <Hamburger />
                     </button>
                 </div>

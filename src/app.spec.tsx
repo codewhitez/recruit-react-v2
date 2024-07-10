@@ -57,7 +57,7 @@ describe("App Component", () => {
         it("toggles menu state on hamburger button click", async () => {
             render(<App />);
 
-            const menuButton = screen.getByRole("menubar");
+            const menuButton = screen.getByLabelText("menu");
             fireEvent.click(menuButton);
             expect(
                 screen.getByText("This is menu content")
