@@ -21,9 +21,6 @@ export const App = () => {
                         </>
                     ) : (
                         <>
-                            <h2 role="heading" aria-level={2}>
-                                Please Enter Your Name
-                            </h2>
                             <Login enterName={setUserName} />
                         </>
                     )}
