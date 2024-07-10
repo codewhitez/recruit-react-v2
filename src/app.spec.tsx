@@ -37,7 +37,6 @@ describe("App Component", () => {
                 { target: { value: "John" } }
             );
 
-            // fireEvent.click(screen.getByText("Enter"));
             fireEvent(
                 screen.getByText("Enter"),
                 new MouseEvent("click", {
@@ -58,7 +57,7 @@ describe("App Component", () => {
         it("toggles menu state on hamburger button click", async () => {
             render(<App />);
 
-            const menuButton = screen.getByRole("menu");
+            const menuButton = screen.getByRole("menubar");
             fireEvent.click(menuButton);
             expect(
                 screen.getByText("This is menu content")
