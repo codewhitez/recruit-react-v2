@@ -23,6 +23,7 @@ const CardEntry = () => {
                         onChange={(e) => setCardNumber(e.target.value)}
                         maxLength={16}
                         placeholder="Credit card number"
+                        autoFocus={true}
                     />
                 </div>
                 <div className={styles["grid-wrapper"]}>
