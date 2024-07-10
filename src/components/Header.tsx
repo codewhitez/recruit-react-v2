@@ -13,14 +13,14 @@ const Header = (props: any) => {
         <>
             <header role="banner" className={styles.header}>
                 <div className={styles["hamburger-container"]}>
-                    <button role="menu" onClick={onClick} className="">
+                    <button onClick={onClick} className="">
                         <Hamburger />
                     </button>
                 </div>
 
-                <a className="" href="/">
+                <div className={styles["title"]}>
                     <h1 className="">{title}</h1>
-                </a>
+                </div>
             </header>
             {isMenuOpen && <Menu onClick={onClick} />}
         </>
@@ -57,22 +57,23 @@ const Menu = (props: { onClick: () => void }) => {
     return (
         <div className={`${styles["menu"]} ${styles["slideIn"]}`}>
             <div className={styles["flex-wrapper"]}>
-                <h2
+                <div
                     role="button"
                     className={styles["back-arrow"]}
+                    title="back"
                     onClick={onClick}
                 >
                     <svg viewBox="0 -960 960 960" fill="#e8eaed">
                         <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" />
                     </svg>
-                </h2>
+                </div>
                 <h2 className={styles["menu-header"]}>Menu</h2>
             </div>
             <div className={styles["grid-wrapper"]}>
-                <nav>
-                    <div role="menuitem" onClick={onClick}>
+                <nav role="menu">
+                    <a href="#" role="menuitem" onClick={onClick}>
                         This is menu content
-                    </div>
+                    </a>
                 </nav>
             </div>
         </div>

@@ -8,12 +8,12 @@
         display: flex;
     }
 
-    a {
+    .title {
         display: flex;
         justify-content: center;
         width: 100%;
         text-decoration: none;
-        color: orange;
+        color: #007bff;
 
         h1 {
             font-size: 28px;
@@ -51,14 +51,12 @@
         height: 40px;
     }
 
-    h2 {
-        text-align: center;
-        line-height: 40px;
-    }
-
     .back-arrow {
         padding: 0 20px 0 20px;
         cursor: pointer;
+        text-align: center;
+        line-height: 40px;
+        margin: 16px 0 20px 0;
     }
 
     .menu-header {
@@ -72,8 +70,9 @@
         nav {
             display: grid;
 
-            div {
-                cursor: pointer;
+            a {
+                color: white;
+                text-decoration: none;
             }
         }
     }
